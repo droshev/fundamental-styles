@@ -30,5 +30,8 @@ jobs:
         uses: ./.github/actions/nodejs
       - name: Bump version
         uses: ./.github/actions/bump-version
+        id: bumpVersion
         with:
           releaseType: prerelease
+      - name: Checking Bump result
+        run: echo ${{ steps.bumpVersion.newVersion }}
