@@ -24,21 +24,18 @@ const bumpedVersionType = () => {
     });
 };
 
+const run = async() => {
+    const release = await bumpedVersionType();
+    core.info(`${release.reason}, therefore release type should be ${release.releaseType}`);
 
-bumpedVersionType()
-    .then((release) => {
-        core.info(`${release.reason}, therefore release type should be ${release.releaseType}`)
-        return release.releaseType;
-    })
-    .then(newReleaseType => {
-        const prerelease = newReleaseType === 'prerelease';
-        return semver.valid(newReleaseType) || semver.inc(currentVersion, newReleaseType, prerelease, prereleaseType === 'rc' ? 'rc' : 'nightly');
-    })
-    .then(newVersion => {
-        core.info(`new version is ${newVersion}`);
-        if (writeFile) {
-            packageJson.version = newVersion;
-            fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));
-        }
-        core.setOutput('newVersion', newVersion);
-    });
+    const prerelease = release.releaseType === 'prerelease';
+    const newVersion = semver.valid(release.releaseType) || semver.inc(currentVersion, release.releaseType, prerelease, prereleaseType === 'rc' ? 'rc' : 'nightly');
+    core.info(`new version is ${newVersion}`);
+    if (writeFile) {
+        packageJson.version = newVersion;
+        fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));
+    }
+    core.setOutput('newVersion', newVersion);
+};
+
+run();
