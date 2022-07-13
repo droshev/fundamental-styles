@@ -1,5 +1,5 @@
 name: Action for semantic version bump
-description: Node.js setup cache
+description: Bump version of root package.json
 
 inputs:
   releaseType:
