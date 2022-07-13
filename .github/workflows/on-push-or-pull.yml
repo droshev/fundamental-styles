@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint commit message
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v3
@@ -49,25 +49,19 @@ jobs:
     name: Dependency installation
     needs: one_run
     steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
-      - name: Install dependencies
-        run: npm i
+      - uses: actions/checkout@v3
+      - name: Yarn setup and dependency installation
+        uses: ./.github/actions/nodejs
 
   lint:
     runs-on: ubuntu-latest
     name: Lint
     needs: install
     steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
-      - run: npm run lint
+      - uses: actions/checkout@v3
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
+      - run: yarn run lint
 
   build:
     runs-on: ubuntu-latest
@@ -75,13 +69,11 @@ jobs:
     needs:
       - install
     steps:
-      - uses: actions/checkout@v2.4.0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
-      - run: npm run build:prod
-      - run: npm run size
+      - uses: actions/checkout@v3
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
+      - run: yarn run build:prod
+      - run: yarn run size
 
   publishRc:
     runs-on: ubuntu-latest
@@ -89,15 +81,13 @@ jobs:
     if: ${{ github.ref_name == 'main' }}
     needs: build
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
         with:
             token: ${{ secrets.GHACTIONS }}
             submodules: true
             fetch-depth: 0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
       - run: ./ci-scripts/setup-npm.sh
         shell: bash
       - run: |
@@ -114,16 +104,14 @@ jobs:
     if: ${{ github.ref_name == 'tmp_branch_for_automated_release_do_not_use' }}
     needs: build
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
         with:
           ref: main
           token: ${{ secrets.GHACTIONS }}
           submodules: true
           fetch-depth: 0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
       - run: ./ci-scripts/setup-npm.sh
         shell: bash
       - run: |
@@ -140,15 +128,13 @@ jobs:
     if: ${{ github.ref_name == 'hotfix_tmp_branch_for_automated_release_do_not_use' }}
     needs: build
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
         with:
           ref: hotfix_tmp_branch_for_automated_release_do_not_use
           submodules: true
           fetch-depth: 0
-      - uses: actions/cache@v2
-        with:
-          path: ${{ env.CACHE_PATHS }}
-          key: node_modules-${{ hashFiles('**/package.json') }}
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
       - run: ./ci-scripts/setup-npm.sh
         shell: bash
       - run: |
