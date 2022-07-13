@@ -1,0 +1,20 @@
+name: Action for semantic version bump
+description: Node.js setup cache
+
+inputs:
+  releaseType:
+    description: Release type
+    required: false
+    default: release
+  prereleaseType:
+    description: Prerelease type
+    required: false
+    default: rc
+  writeFile:
+    description: Write to package.json
+    required: false
+    default: false
+
+runs:
+  using: node16
+  main: ./index.js

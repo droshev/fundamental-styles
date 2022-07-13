@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    name: Dependency installation
+    needs: one_run
+    steps:
+      - uses: actions/checkout@v3
+      - name: Yarn setup and dependency installation
+        uses: ./.github/actions/nodejs
+  bump:
+    runs-on: ubuntu-latest
+    name: Bump version
+    needs: install
+    steps:
+      - uses: actions/checkout@v3
+      - name: Yarn setup
+        uses: ./.github/actions/nodejs
+      - uses: ./github/actions/bump-version
