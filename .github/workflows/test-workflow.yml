@@ -24,8 +24,11 @@ jobs:
     needs: install
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+
+      - name: Fetch
+      - run: |
+          git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+          git fetch
       - name: Yarn setup
         uses: ./.github/actions/nodejs
       - name: Bump version
