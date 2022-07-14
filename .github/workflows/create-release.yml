@@ -2,7 +2,15 @@ name: Create release
 
 on:
   workflow_dispatch:
-
+    inputs:
+      mode:
+        type: choice
+        description: release type
+        required: true
+        default: 'release'
+        options:
+          - prerelease
+          - release
 jobs:
   run-release:
     name: Run release
