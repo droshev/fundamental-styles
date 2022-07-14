@@ -26,4 +26,5 @@ jobs:
         with:
           releaseType: release
           writeFile: true
-        run: git status
+      - run: git status
+        shell: bash
