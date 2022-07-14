@@ -18,11 +18,8 @@ jobs:
     steps:
       - name: Fetch from origin repo
         uses: actions/checkout@v3
-
-      - name: Fetch
-        run: |
-          git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
-          git fetch
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js and Cache
         uses: ./.github/actions/nodejs
