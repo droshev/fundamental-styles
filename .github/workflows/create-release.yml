@@ -7,7 +7,6 @@ jobs:
   run-release:
     name: Run release
     runs-on: ubuntu-latest
-    if: ${{ contains(github.head_ref, 'main') }}
     steps:
       - name: Fetch from origin repo
         uses: actions/checkout@v3
@@ -28,3 +27,4 @@ jobs:
           writeFile: true
       - run: git status
         shell: bash
+
