@@ -31,8 +31,25 @@ jobs:
         id: bumpVersion
         uses: ./.github/actions/bump-version
         with:
-          releaseType: release
+          releaseType: ${{ inputs.mode }}
           writeFile: true
+
+      - name: Update Changelog
+        run: conventional-changelog -p angular -i CHANGELOG.md -s
+
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]"
+          git tag v${{ steps.bumpVersion.outputs.newVersion }}
+          git push origin --tags
+      - name: Create Release
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          generateReleaseNotes: true
+          prerelease: ${{ inputs.mode == 'prerelease' }}
+          tag: v${{ steps.bumpVersion.outputs.newVersion }}
+
       - run: git status
         shell: bash
 
