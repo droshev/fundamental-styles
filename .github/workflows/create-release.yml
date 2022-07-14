@@ -26,12 +26,4 @@ jobs:
         with:
           releaseType: release
           writeFile: true
-
-      - name: Tag and push
-        run: |
-          git add .
-          git commit -m "chore: release v${{ steps.bumpVersion.newVersion }} [ci skip]" --no-verify
-          git tag -a v${{ steps.bumpVersion.outputs.newVersion }} -m "chore: release ${{ steps.bumpVersion.newVersion }} [ci skip]"
-          git push origin ${{ github.head_ref }}
-          git push origin --tags
-          echo ::set-output name=new_version::$(git describe HEAD --abbrev=0)
+        run: git status
