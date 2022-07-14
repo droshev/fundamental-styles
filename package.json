@@ -1,6 +1,6 @@
 {
   "name": "fundamental-styles",
-  "version": "0.24.2-rc.0",
+  "version": "0.25.0-0",
   "description": "Fundamental Library Styles is a Design System and HTML/CSS Component Library used to build modern Product User Experiences with SAP Fiori look and feel with any web technology. Learn more about this project at - http://sap.github.io/fundamental-styles/",
   "main": "dist/fundamental-styles.css",
   "engines": {
@@ -71,6 +71,7 @@
   "license": "Apache-2.0",
   "homepage": "https://sap.github.io/fundamental-styles/",
   "devDependencies": {
+    "@actions/core": "^1.9.0",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/plugin-transform-runtime": "^7.11.5",
@@ -102,6 +103,9 @@
     "clean-css": "^5.3.0",
     "clean-css-cli": "^5.4.1",
     "colors": "1.4.0",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-angular": "^5.0.13",
+    "conventional-recommended-bump": "^6.1.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "cssnano": "5.1.7",
@@ -147,11 +151,7 @@
     "stylelint-scss": "^3.19.0",
     "tocbot": "^4.12.3",
     "webpack": "^5.66.0",
-    "webpack-merge": "^5.7.3",
-    "@actions/core": "^1.9.0",
-    "conventional-changelog": "^3.1.25",
-    "conventional-changelog-angular": "^5.0.13",
-    "conventional-recommended-bump": "^6.1.0"
+    "webpack-merge": "^5.7.3"
   },
   "directories": {
     "storybook-testing": "storybook-testing"
