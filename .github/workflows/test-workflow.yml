@@ -37,4 +37,4 @@ jobs:
         with:
           releaseType: prerelease
       - name: Checking Bump result
-        run: echo ${{ steps.bumpVersion.newVersion }}
+        run: echo ${{ steps.bumpVersion.outputs.newVersion }}
