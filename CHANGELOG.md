@@ -1,3 +1,12 @@
+## [0.24.3-rc.3](https://github.com/SAP/fundamental-styles/compare/v0.24.3-rc.2...v0.24.3-rc.3) (2022-07-19)
+
+
+### Features
+
+* **ci:** added no-verify to the hotfix commit ([50a4441](https://github.com/SAP/fundamental-styles/commit/50a4441fb4df9cd9cec11fad6053fceb6f7bf291))
+
+
+
 ## [0.24.3-rc.2](https://github.com/SAP/fundamental-styles/compare/v0.24.3-rc.1...v0.24.3-rc.2) (2022-07-19)
 
 
