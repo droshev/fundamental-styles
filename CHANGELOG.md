@@ -1,3 +1,12 @@
+## [0.24.4-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.24.3...v0.24.4-rc.0) (2022-07-19)
+
+
+### Features
+
+* **ci:** some test feature commit to increase patch version RC ([b679529](https://github.com/SAP/fundamental-styles/commit/b679529b29e1431d81d92a1e9b5050a965ed1f3d))
+
+
+
 ## [0.24.3](https://github.com/SAP/fundamental-styles/compare/v0.24.3-rc.3...v0.24.3) (2022-07-19)
 
 
