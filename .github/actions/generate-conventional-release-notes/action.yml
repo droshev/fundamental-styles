@@ -1,0 +1,15 @@
+name: Generate changelog
+description: Generates changelog from nearest release to current commit
+
+inputs:
+  isPrerelease:
+    description: Is pre-release
+    required: false
+    default: false
+outputs:
+  generatedChangelog:
+    description: Generated changelog
+
+runs:
+  using: node16
+  main: ./index.js
