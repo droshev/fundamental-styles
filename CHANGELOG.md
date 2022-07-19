@@ -1,3 +1,12 @@
+## [0.24.3-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.24.2...v0.24.3-rc.0) (2022-07-19)
+
+
+### Features
+
+* **ci:** imported features from forked repo ([#1](https://github.com/SAP/fundamental-styles/issues/1)) ([c26e745](https://github.com/SAP/fundamental-styles/commit/c26e7451a461878708ab0a3653ec6f15fd3bf185))
+
+
+
 
 ### [0.24.2](https://github.com/SAP/fundamental-styles/compare/v0.24.2-rc.6...v0.24.2) (2022-07-18)
 
