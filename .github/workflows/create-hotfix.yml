@@ -26,12 +26,12 @@ jobs:
         with:
           isPrerelease: false
           writeFile: true
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        uses: ./.github/actions/build
+#
+#      - name: Lint
+#        run: npm run lint
+#
+#      - name: Build
+#        uses: ./.github/actions/build
 
       - name: Update Changelog
         run: npx conventional-changelog-cli -p angular -i CHANGELOG.md -s
