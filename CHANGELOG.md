@@ -1,3 +1,12 @@
+## [0.24.5](https://github.com/SAP/fundamental-styles/compare/v0.24.4...v0.24.5) (2022-07-19)
+
+
+### Features
+
+* **ci:** some test feature commit for hotfix over hotfix ([08f9cad](https://github.com/SAP/fundamental-styles/commit/08f9cadc3eabf32f0aa29b70cb997e0457002d92))
+
+
+
 ## [0.24.4](https://github.com/SAP/fundamental-styles/compare/v0.24.3...v0.24.4) (2022-07-19)
 
 
