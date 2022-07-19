@@ -7,7 +7,11 @@ inputs:
   isPrerelease:
     description: Is prerelease version
     required: true
-    default: false
+    default: "false"
+  isHotfix:
+    description: Is hotfix version
+    required: true
+    default: "false"
   token:
     description: NPM token
     required: true
