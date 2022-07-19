@@ -26,22 +26,22 @@ jobs:
         with:
           isPrerelease: false
           writeFile: true
-#
-#      - name: Lint
-#        run: npm run lint
-#
-#      - name: Build
-#        uses: ./.github/actions/build
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        uses: ./.github/actions/build
 
       - name: Update Changelog
         run: npx conventional-changelog-cli -p angular -i CHANGELOG.md -s
 
-      #      - name: Publish packages to NPM
-      #        uses: ./.github/actions/npm-publish
-      #        with:
-      #          packagePaths: ".,dist-common-css,dist-fn,dist-fn-icons,dist-theming"
-      #          isPrerelease: ${{ steps.bumpVersion.outputs.isPrerelease }}
-      #          token: ${{ secrets.NPM_TOKEN }}
+      - name: Publish packages to NPM
+        uses: ./.github/actions/npm-publish
+        with:
+          packagePaths: ".,dist-common-css,dist-fn,dist-fn-icons,dist-theming"
+          isHotfix: true
+          token: ${{ secrets.NPM_TOKEN }}
 
       - uses: ./.github/actions/set-up-git
         name: Set up git user
