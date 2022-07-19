@@ -52,7 +52,7 @@ jobs:
       - name: Commit Changes
         run: |
           git add .
-          git commit -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]"
+          git commit -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]" --no-verify
           git tag -a v${{ steps.bumpVersion.outputs.newVersion }} -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]"
           git push origin v${{ steps.bumpVersion.outputs.newVersion }}
 
