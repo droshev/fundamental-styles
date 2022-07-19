@@ -1,3 +1,13 @@
+## [0.25.1-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.25.0...v0.25.1-rc.0) (2022-07-19)
+
+
+### Bug Fixes
+
+* **ci:** fixed types of inputs, removed unnecessary input ([d818d1c](https://github.com/SAP/fundamental-styles/commit/d818d1c8f1dfe85e1f441be206cc027d42e315c9))
+* **ci:** uncommented lint, build and publish steps ([9dfb2db](https://github.com/SAP/fundamental-styles/commit/9dfb2db212364bb218c294c4575372af748bc14e))
+
+
+
 # [0.25.0](https://github.com/SAP/fundamental-styles/compare/v0.25.0-rc.0...v0.25.0) (2022-07-19)
 
 
