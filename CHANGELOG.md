@@ -1,3 +1,17 @@
+# [0.25.0-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.24.4-rc.0...v0.25.0-rc.0) (2022-07-19)
+
+
+### Features
+
+* **ci:** some test feature commit to increase minor version RC ([eb0107e](https://github.com/SAP/fundamental-styles/commit/eb0107e37e9c6aa767b20eabddeded99b2ece001))
+
+
+### BREAKING CHANGES
+
+* **ci:** breaking change description
+
+
+
 ## [0.24.4-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.24.3...v0.24.4-rc.0) (2022-07-19)
 
 
