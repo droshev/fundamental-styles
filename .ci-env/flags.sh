@@ -3,3 +3,5 @@
 # - npm publish with `latest` tag, which will become new default version
 # - main version incrementation
 latest=true
+
+echo '::set-output name=isLatest::$latest'
