@@ -1,3 +1,19 @@
+## [0.25.1-rc.1](https://github.com/SAP/fundamental-styles/compare/v0.25.1-rc.0...v0.25.1-rc.1) (2022-07-20)
+
+
+### Features
+
+* **ci:** added dry run to publish ([573eac3](https://github.com/SAP/fundamental-styles/commit/573eac3641cd3ec69e3fdc7fc57485e7e60f0a4a))
+* **ci:** added github pages deploy ([ad838c0](https://github.com/SAP/fundamental-styles/commit/ad838c0d269fa341a8e180d2b74039f39e1257da))
+* **ci:** added latest support to the hotfix ci script ([73d3f57](https://github.com/SAP/fundamental-styles/commit/73d3f572c2f093e720d14dc314e7f3bfd5b99c0e))
+* **ci:** added name to gh_pages job ([bf77b36](https://github.com/SAP/fundamental-styles/commit/bf77b3667da203f7b0fa555aa68cb5314925dd24))
+* **ci:** removed dry run ([1bbe72f](https://github.com/SAP/fundamental-styles/commit/1bbe72f308d9ab688ad1df3456a676191fd0ae50))
+* **ci:** removed unnecessary dependencies and ci scripts ([b162737](https://github.com/SAP/fundamental-styles/commit/b162737b9d05eaa575eab3063945d07a8bd90a80))
+* **ci:** removed unused scripts and dependencies ([4e4421e](https://github.com/SAP/fundamental-styles/commit/4e4421e4c9c1477dcc7a801a12d7e79a42528220))
+* **ci:** upgraded ci workflows ([80517eb](https://github.com/SAP/fundamental-styles/commit/80517eb0162aa24b75653fcfd6a5ae1bf7fb36f8))
+
+
+
 ## [0.25.1-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.25.0...v0.25.1-rc.0) (2022-07-19)
 
 
