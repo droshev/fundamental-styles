@@ -1,3 +1,30 @@
+## [0.25.1](https://github.com/SAP/fundamental-styles/compare/v0.25.0...v0.25.1) (2022-07-20)
+
+
+### Features
+
+* **ci:** added git update index chmod on flags file ([7266330](https://github.com/SAP/fundamental-styles/commit/72663307515282e7928f9256b7279914e3717ede))
+* **ci:** added missing property ([7b23c2a](https://github.com/SAP/fundamental-styles/commit/7b23c2a00f916e5f7fe5a533d5ba309f29620138))
+* **ci:** blocked main update ([b8b3df3](https://github.com/SAP/fundamental-styles/commit/b8b3df3b269d41f86cdd42b0cd4012fea3380a68))
+* **ci:** commented use of env ([43bf7a8](https://github.com/SAP/fundamental-styles/commit/43bf7a88786291729ae5d714b214364bea6913ac))
+* **ci:** echo latest ([a7152d4](https://github.com/SAP/fundamental-styles/commit/a7152d4b837d34292f507ee0e9b06213852579cb))
+* **ci:** fixed echo ([a579bae](https://github.com/SAP/fundamental-styles/commit/a579bae4b90962bff05965720faa79f699b8626f))
+* **ci:** fixed file ([db47b96](https://github.com/SAP/fundamental-styles/commit/db47b96f8258655c02b681aea8082449d37a7615))
+* **ci:** fixed incorrect parameter pass ([ec597cf](https://github.com/SAP/fundamental-styles/commit/ec597cfa1591443ed43aad5370bf8205388d2f4d))
+* **ci:** imported features from main for latest hotfix ([26f070a](https://github.com/SAP/fundamental-styles/commit/26f070aadd72664b370f5e62b214a082d0cfc6f5))
+* **ci:** imported features from main for latest hotfix [#2](https://github.com/SAP/fundamental-styles/issues/2) ([792c1a1](https://github.com/SAP/fundamental-styles/commit/792c1a1f72917bed700294a0bda0939a4cdad1e8))
+* **ci:** moved away secret refs ([9b02fed](https://github.com/SAP/fundamental-styles/commit/9b02fedd42040364e1cce9bfbd37daaf531e0fdc))
+* **ci:** moved from workflow to action ([316db81](https://github.com/SAP/fundamental-styles/commit/316db81f06c684ee4cee60c6084d722a9e5622f0))
+* **ci:** moved main version update in separate workflow file ([8ddbbfa](https://github.com/SAP/fundamental-styles/commit/8ddbbfa6ec93cb3e92a33d337ffe5d0876e75c65))
+* **ci:** try this way ([0b3d749](https://github.com/SAP/fundamental-styles/commit/0b3d7498ed948434bf3e30a7c85171055acc83dc))
+* **ci:** try this way [#2](https://github.com/SAP/fundamental-styles/issues/2) ([5cfc7df](https://github.com/SAP/fundamental-styles/commit/5cfc7df0b259b4e461f2f270e85aa3ab3f485dd8))
+* **ci:** trying differently ([0852c68](https://github.com/SAP/fundamental-styles/commit/0852c688c565a78d1fef4b914ca18e09943138ac))
+* **ci:** trying differently [#2](https://github.com/SAP/fundamental-styles/issues/2) ([00069a6](https://github.com/SAP/fundamental-styles/commit/00069a67ebe6405ea7f26e40fb883a4c68a48acb))
+* **ci:** trying differently [#3](https://github.com/SAP/fundamental-styles/issues/3) ([dec6204](https://github.com/SAP/fundamental-styles/commit/dec6204d81c683fd38ce2db3ab69a9caf85f23f8))
+* **ci:** trying differently [#4](https://github.com/SAP/fundamental-styles/issues/4) ([34de331](https://github.com/SAP/fundamental-styles/commit/34de3314104f3a0abe19ed7b88e328fd98b8c79c))
+
+
+
 # [0.25.0](https://github.com/SAP/fundamental-styles/compare/v0.25.0-rc.0...v0.25.0) (2022-07-19)
 
 
