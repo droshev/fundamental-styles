@@ -20,7 +20,7 @@ jobs:
       - name: Using CI env flags
         run: .ci-env/flags.sh
 
-      - run: echo latest
+      - run: echo $latest
 
       - name: Setup Node.js and Cache
         uses: ./.github/actions/nodejs
