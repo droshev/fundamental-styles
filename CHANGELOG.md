@@ -1,3 +1,12 @@
+## [0.25.1-rc.2](https://github.com/SAP/fundamental-styles/compare/v0.25.1-rc.1...v0.25.1-rc.2) (2022-07-20)
+
+
+### Features
+
+* **ci:** removed inputs ([85c5737](https://github.com/SAP/fundamental-styles/commit/85c57373282310dbdc1107b9bf17b190341fc851))
+
+
+
 ## [0.25.1-rc.1](https://github.com/SAP/fundamental-styles/compare/v0.25.1-rc.0...v0.25.1-rc.1) (2022-07-20)
 
 
