@@ -76,5 +76,9 @@ jobs:
           body: ${{ steps.generate_body.outputs.generatedReleaseNotes }}
 
       - if: ${{ steps.ciEnv.outputs.isLatest }}
-        uses: ./.github/actions/update-version-on-main
         name: Update version on main
+        uses: ./.github/actions/update-version-on-main
+        with:
+          name: ${{ secrets.GH_NAME }}
+          email: ${{ secrets.GH_EMAIL }}
+          token: ${{ secrets.GHACTIONS }}

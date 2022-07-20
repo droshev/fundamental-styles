@@ -1,5 +1,16 @@
 name: Update version on main
 
+inputs:
+  name:
+    description: Github user name
+    required: true
+  email:
+    description: Github email
+    required: true
+  token:
+    description: GH Token
+    required: true
+
 runs:
   using: composite
   steps:
@@ -8,7 +19,7 @@ runs:
       with:
         ref: main
         fetch-depth: 0
-        token: ${{ secrets.GHACTIONS }}
+        token: ${{ inputs.token }}
 
     - name: Setup Node.js and Cache
       uses: ./.github/actions/nodejs
@@ -26,8 +37,8 @@ runs:
     - uses: ./.github/actions/set-up-git
       name: Set up git user
       with:
-        name: ${{ secrets.GH_NAME }}
-        email: ${{ secrets.GH_EMAIL }}
+        name: ${{ inputs.name }}
+        email: ${{ inputs.email }}
 
     - name: Commit Changes
       run: |
