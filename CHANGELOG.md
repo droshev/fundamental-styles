@@ -1,3 +1,13 @@
+## [0.25.3-rc.0](https://github.com/SAP/fundamental-styles/compare/v0.25.1-rc.2...v0.25.3-rc.0) (2022-07-20)
+
+
+### Features
+
+* **ci:** imported features from tag ([de0adde](https://github.com/SAP/fundamental-styles/commit/de0addeb814eabd64decec6f5726566425250ed3))
+* **ci:** removed unnecessary step ([c71bd09](https://github.com/SAP/fundamental-styles/commit/c71bd097e97880a7999dc85030bf0d4fc96aeb7c))
+
+
+
 ## [0.25.2](https://github.com/SAP/fundamental-styles/compare/v0.25.1-rc.2...v0.25.2) (2022-07-20)
 
 
