@@ -44,7 +44,7 @@ jobs:
         uses: ./.github/actions/npm-publish
         with:
           packagePaths: ".,dist-common-css,dist-fn,dist-fn-icons,dist-theming"
-          isHotfix: ${{ env.isLatest }}
+          isHotfix: ${{ steps.ciEnv.outputs.isLatest }}
           token: ${{ secrets.NPM_TOKEN }}
 
       - uses: ./.github/actions/set-up-git
