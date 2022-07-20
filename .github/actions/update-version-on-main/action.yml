@@ -33,6 +33,7 @@ runs:
 
     - name: Update Changelog
       run: npx conventional-changelog-cli -p angular -i CHANGELOG.md -s
+      shell: bash
 
     - uses: ./.github/actions/set-up-git
       name: Set up git user
@@ -45,3 +46,4 @@ runs:
         git add .
         git commit -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]" --no-verify
         git push
+      shell: bash
