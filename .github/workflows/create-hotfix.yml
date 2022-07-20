@@ -5,6 +5,8 @@ on:
     branches:
       - hotfix_tmp_branch_for_automated_release_do_not_use
 
+
+
 jobs:
   run-release:
     name: Run release
@@ -18,9 +20,7 @@ jobs:
           token: ${{ secrets.GHACTIONS }}
 
       - name: Using CI env flags
-        run: .ci-env/flags.sh
-
-      - run: echo $latest
+        run: source .ci-env/flags.sh
 
       - name: Setup Node.js and Cache
         uses: ./.github/actions/nodejs
@@ -45,7 +45,7 @@ jobs:
         uses: ./.github/actions/npm-publish
         with:
           packagePaths: ".,dist-common-css,dist-fn,dist-fn-icons,dist-theming"
-#          isHotfix: ${{ !env.latest }}
+          isHotfix: ${{ latest }}
           token: ${{ secrets.NPM_TOKEN }}
 
       - uses: ./.github/actions/set-up-git

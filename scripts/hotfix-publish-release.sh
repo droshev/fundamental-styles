@@ -30,8 +30,6 @@ git checkout -b $HOTFIX_TMP_BRANCH
 
 [[ $1 != "latest" ]] && sed -i -e "s/\(latest=\).*/\1false/" .ci-env/flags.sh
 
-git update-index --chmod=+x .ci-env/flags.sh
-
 git add -u
 git commit -m "chore(release): create new release via script" -n
 
