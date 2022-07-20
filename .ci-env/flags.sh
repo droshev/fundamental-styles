@@ -4,4 +4,4 @@
 # - main version incrementation
 latest=true
 
-echo '::set-output name=isLatest::$latest'
+echo '::set-output name=isLatest::${{ latest }}'
