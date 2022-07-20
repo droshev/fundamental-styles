@@ -78,6 +78,7 @@ jobs:
   mainUpdate:
     name: Update Version on main
 #    if: ${{ env.latest }}
+    needs: run-release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
