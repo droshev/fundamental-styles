@@ -2,6 +2,4 @@
 # This flag indicates if the tag should be treated as a latest one, which is going to trigger
 # - npm publish with `latest` tag, which will become new default version
 # - main version incrementation
-latest=true
-
-echo '::set-output name=isLatest::${latest}'
+echo '::set-output name=isLatest::true'
