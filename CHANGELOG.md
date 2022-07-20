@@ -1,3 +1,12 @@
+## [0.25.2](https://github.com/SAP/fundamental-styles/compare/v0.25.1...v0.25.2) (2022-07-20)
+
+
+### Features
+
+* **ci:** added chmod to flags.sh and updated action ([0d9e64b](https://github.com/SAP/fundamental-styles/commit/0d9e64b81af86b16ab143db37157642e2f3fa7d3))
+
+
+
 ## [0.25.1](https://github.com/SAP/fundamental-styles/compare/v0.25.0...v0.25.1) (2022-07-20)
 
 
