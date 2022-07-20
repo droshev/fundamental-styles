@@ -48,9 +48,3 @@ runs:
         git push
       shell: bash
 
-    # this is temporarily here. Once .github/actions/update-version-on-main exists on main, we can remove this step
-    - if: ${{ steps.ciEnv.outputs.isLatest }}
-      name: Checkout newly created tag
-      uses: actions/checkout@v3
-      with:
-        ref: v${{ steps.bumpVersion.outputs.newVersion }}
