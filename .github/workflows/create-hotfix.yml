@@ -5,8 +5,6 @@ on:
     branches:
       - hotfix_tmp_branch_for_automated_release_do_not_use
 
-
-
 jobs:
   run-release:
     name: Run release
@@ -22,8 +20,6 @@ jobs:
       - name: Using CI env flags
         id: ciEnv
         run: .ci-env/flags.sh
-
-      - run: echo "isLatest=${{ steps.ciEnv.outputs.isLatest }}" >> $GITHUB_ENV
 
       - name: Setup Node.js and Cache
         uses: ./.github/actions/nodejs
@@ -79,40 +75,6 @@ jobs:
           tag: v${{ steps.bumpVersion.outputs.newVersion }}
           body: ${{ steps.generate_body.outputs.generatedReleaseNotes }}
 
-  mainUpdate:
-    name: Update Version on main
-    if: ${{ env.latest }}
-    needs: run-release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GHACTIONS }}
-
-      - name: Setup Node.js and Cache
-        uses: ./.github/actions/nodejs
-
-      - name: Bump Version
-        id: bumpVersion
-        uses: ./.github/actions/bump-version
-        with:
-          isPrerelease: false
-          writeFile: true
-
-      - name: Update Changelog
-        run: npx conventional-changelog-cli -p angular -i CHANGELOG.md -s
-
-      - uses: ./.github/actions/set-up-git
-        name: Set up git user
-        with:
-          name: ${{ secrets.GH_NAME }}
-          email: ${{ secrets.GH_EMAIL }}
-
-      - name: Commit Changes
-        run: |
-          git add .
-          git commit -m "chore(release): release v${{ steps.bumpVersion.outputs.newVersion }} [ci skip]" --no-verify
-          git push
+      - if: ${{ steps.ciEnv.outputs.isLatest }}
+        uses: ./.github/workflows/update-version-on-main
+        name: Update version on main
