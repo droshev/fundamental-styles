@@ -1,3 +1,12 @@
+## [0.25.3](https://github.com/SAP/fundamental-styles/compare/v0.25.2...v0.25.3) (2022-07-20)
+
+
+### Features
+
+* **ci:** for latest hotfix ([78faee5](https://github.com/SAP/fundamental-styles/commit/78faee567e3fece224f2ae2ad60303d49730f8f3))
+
+
+
 ## [0.25.2](https://github.com/SAP/fundamental-styles/compare/v0.25.1...v0.25.2) (2022-07-20)
 
 
